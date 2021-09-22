@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
+  solution: 'PCAxis.PX-Web.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
