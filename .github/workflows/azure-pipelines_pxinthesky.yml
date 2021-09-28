@@ -23,16 +23,16 @@ jobs:
         uses: NuGet/setup-nuget@v1.0.5
 
       - name: Restore NuGet packages
-        run: nuget restore
+        run: nuget restore PCAxis.PX-Web_without_tests.sln
 
       - name: Publish to folder
-        run: msbuild PCAxis.PX-Web_without_tests /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
+        run: msbuild PCAxis.PX-Web_without_tests.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: ASP-app
-          path: '/published/**'
+          path: bin\Release\Publish
 
   deploy:
     runs-on: windows-latest
