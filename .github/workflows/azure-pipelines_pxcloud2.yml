@@ -41,17 +41,17 @@ jobs:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
-#    steps:
-#      - name: Download artifact from build job
-#        uses: actions/download-artifact@v2
-#        with:
-#          name: ASP-app
-#
-#      - name: Deploy to Azure Web App
-#        id: deploy-to-webapp
-#        uses: azure/webapps-deploy@v2
-#        with:
-#          app-name: 'PXCloud2'
-#          slot-name: 'Production'
-#          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0C291CE2EEA14BC2BB5F6A6972930634 }}
-#          package: .
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v2
+        with:
+          name: ASP-app
+
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'PXCloud2'
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0C291CE2EEA14BC2BB5F6A6972930634 }}
+          package: .
