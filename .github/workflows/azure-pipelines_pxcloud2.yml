@@ -34,13 +34,13 @@ jobs:
           name: ASP-app
           path: '/published/**'
 
-#  deploy:
-#    runs-on: windows-latest
-#    needs: build
-#    environment:
-#      name: 'Production'
-#      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-#
+  deploy:
+    runs-on: windows-latest
+    needs: build
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
 #    steps:
 #      - name: Download artifact from build job
 #        uses: actions/download-artifact@v2
