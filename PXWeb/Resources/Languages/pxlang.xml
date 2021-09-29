@@ -683,7 +683,7 @@
    <sentence name="PxWebHome" value="Home"/>
    <sentence name="PxWebHomeImageScreenReader" value="Icon representing home" />
    <sentence name="PxWebChangeToThisLanguage" value="English" />
-   <sentence name="PxWebSubHeaderChooseVariables" value="Choose variables"/>
+   <sentence name="PxWebSubHeaderChooseVariables" value="Lasse Kjus variables"/>
    <sentence name="PxWebSubHeaderResult" value="Result"/>
    <sentence name="PxWebOfficialStatisticsLogo" value="Logotype for official statistics"/>
    <sentence name="PxWebMenuBurger" value="Menu" />
